@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Kapcsolat — Szigligeti Óvoda</title><link rel="stylesheet" href="css/styles.css" /></head>
+<body>
+<header class="header">
+  <div class="header-inner container">
+    <div class="brand">
+      <img src="assets/logo.png" alt="logo" class="brand-logo" />
+      <div>
+        <div class="title">Csillagközi Székhelyóvoda</div>
+        <div class="subtitle">Természetközeli, barátságos közösség</div>
+      </div>
+    </div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    <nav class="nav" id="mobile-nav" aria-label="fő navigáció" hidden>
+      <a href="index.html">Kezdőlap</a>
+      <a href="bemutatkozas.html">Bemutatkozás</a>
+      <a href="csoportok.html">Csoportok</a>
+      <a href="galeria.html">Galéria</a>
+      <a href="eredmenyek.html">Eredmények</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
+    </nav>
+  </div>
+</header>
+<div class="glow-bar" aria-hidden="true"></div>
+<nav id="mobile-nav" class="mobile-nav" hidden>
+  <a href="index.html">Kezdőlap</a>
+  <a href="bemutatkozas.html">Bemutatkozás</a>
+  <a href="csoportok.html">Csoportok</a>
+  <a href="galeria.html">Galéria</a>
+  <a href="eredmenyek.html">Eredmények</a>
+  <a href="kapcsolat.html">Kapcsolat</a>
+</nav>
+
+<main class="container main">
+  <section class="card">
+    <h1>Kapcsolat</h1>
+    <section class="nunito-text">
+    <address>
+      8900 Zalaegerszeg, Köztársaság útja 70.<br><br>
+      Telefon: <a href="tel:+3692598702">+36 92 598 702</a>
+<br><br>
+      Email: <a href="mailto:csillagkozi@zelkanet.hu">csillagkozi@zelkanet.hu</a>
+    </address>
+    </section>
+    <p><a class="btn" href="https://www.google.com/maps/place/Csillagk%C3%B6zi+Sz%C3%A9khely%C3%B3voda/@46.8257718,16.8299192,17z/data=!3m1!4b1!4m6!3m5!1s0x4768d7e12dc2043f:0xd77458d5b19b88c4!8m2!3d46.8257682!4d16.8324941!16s%2Fg%2F11bw47h193?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D" target="_blank">Térkép</a></p>
+  </section>
+</main>
+
+<p> <br><br><br><br><br><br><br></p>
+<footer class="footer"><div class="container">© 2025 Csillagközi Székhelyóvoda</div></footer>
+<script>
+(function(){
+  const btn = document.querySelector('.menu-btn');
+  const mob = document.getElementById('mobile-nav');
+  if(!btn || !mob) return;
+
+  btn.addEventListener('click', ()=> {
+    mob.classList.toggle('show');
+    const open = mob.classList.contains('show');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  mob.querySelectorAll('a').forEach(a => 
+    a.addEventListener('click', ()=> {
+      mob.classList.remove('show');
+      btn.setAttribute('aria-expanded','false');
+    })
+  );
+})();
+</script>
+
+</body>
+</html>

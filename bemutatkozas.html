@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Bemutatkozás — Szigligeti Óvoda</title><link rel="stylesheet" href="css/styles.css" /></head>
+<body>
+<header class="header">
+  <div class="header-inner container">
+    <div class="brand">
+      <img src="assets/logo.png" alt="logo" class="brand-logo" />
+      <div>
+        <div class="title">Csillagközi Székhelyóvoda</div>
+        <div class="subtitle">Természetközeli, barátságos közösség</div>
+      </div>
+    </div>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    <nav class="nav" id="mobile-nav" aria-label="fő navigáció" hidden>
+      <a href="index.html">Kezdőlap</a>
+      <a href="bemutatkozas.html">Bemutatkozás</a>
+      <a href="csoportok.html">Csoportok</a>
+      <a href="galeria.html">Galéria</a>
+      <a href="eredmenyek.html">Eredmények</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
+    </nav>
+  </div>
+</header>
+<div class="glow-bar" aria-hidden="true"></div>
+<nav id="mobile-nav" class="mobile-nav" hidden>
+  <a href="index.html">Kezdőlap</a>
+  <a href="bemutatkozas.html">Bemutatkozás</a>
+  <a href="csoportok.html">Csoportok</a>
+  <a href="galeria.html">Galéria</a>
+  <a href="eredmenyek.html">Eredmények</a>
+  <a href="kapcsolat.html">Kapcsolat</a>
+</nav>
+
+<main class="container main">
+  <section class="card">
+    <h1>Bemutatkozás</h1>
+    <ul>
+      <section class="nunito-text">
+    <p> Óvodánk minden csoportja szeretetteljes és inspiráló környezetet biztosít a gyerekek számára. <br> <br>
+      Az alábbiakban bemutatjuk csoportjainkat és az őket vezető óvónőket, dajkát, akik gondoskodnak arról, hogy a kicsik minden nap örömmel tanuljanak és játszanak.
+      <br> <br>
+      Minden csoportban a gyermekek játékosan fejlesztik készségeiket, kibontakoztatják kreativitásukat és szociális képességeiket.
+      <br>
+      Foglalkozásaink során kiemelt figyelmet fordítunk a természet szeretetére, a közösségi élményekre, és arra, hogy minden nap biztonságos, vidám és inspiráló legyen.
+</section>
+
+<section class="nunito-text">
+<br> <br>
+<h3>Vezetőség ⚙:</h3>
+Igazgató: Szijártóné Herbai Erzsébet
+<br>
+Igazgatóhelyettesek: Káli Annamária és Németh Eszter
+<br> <br>
+<h3>Konyhai dolgozók 🍽:</h3>
+Kiss János Antalné, Sebestyén Judit
+<br> <br>
+<h3>Karbantartó 🛠:</h3>
+Simon József
+<br> <br> <br>
+</p>
+    <h3>Kiemelt értékeink</h3>
+    <ul>
+      <li>Környezettudatosság</li>
+      <li>Családok bevonása</li>
+    </ul>
+
+    </section>
+</ul>
+  </section>
+</main>
+<footer class="footer"><div class="container">© 2025 Csillagközi Székhelyóvoda</div></footer>
+<script>
+(function(){
+  const btn = document.querySelector('.menu-btn');
+  const mob = document.getElementById('mobile-nav');
+  if(!btn || !mob) return;
+
+  btn.addEventListener('click', ()=> {
+    mob.classList.toggle('show');
+    const open = mob.classList.contains('show');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  mob.querySelectorAll('a').forEach(a => 
+    a.addEventListener('click', ()=> {
+      mob.classList.remove('show');
+      btn.setAttribute('aria-expanded','false');
+    })
+  );
+})();
+</script>
+
+</body>
+</html>
